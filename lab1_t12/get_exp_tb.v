@@ -37,26 +37,33 @@ module get_exp_tb;
 	);
 
 	initial begin
-		// Initialize Inputs
-				IN = 0;
-		#20
-		IN = 'b100000010000;
-		#20
-		IN = 'b000100000000;
-		#20
-		IN = 'b000000000101;
-		#20
-		IN = 'b000000000001;
-		#20;
-		IN = 'b000000001000;
-		#20
-		IN = 'b010000000000;
-		#20
-
-		// Wait 100 ns for global reset to finish
+		
 		#100;
-        
-		// Add stimulus here
+		
+		//test 0
+		//exp = 000
+		IN = 0;
+		#20
+		
+		//test last non-exponent value
+		//exp = 000
+		IN = 3;
+		#20
+		
+		//test first exponent value
+		//exp = 001
+		IN = 4;
+		#20
+		
+		//test value in middle
+		//exp = 011
+		IN = 6;
+		#20
+		
+		//test max
+		//exp = 111
+		IN = 11;
+		#20
 
 	end
       
