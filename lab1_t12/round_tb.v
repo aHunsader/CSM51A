@@ -35,7 +35,7 @@ module round_tb;
 	wire [2:0] E;
 
 	// Instantiate the Unit Under Test (UUT)
-	round uut (input [11:0] mag, input [3:0] f_temp, input [2:0] exp, input round_bit, output [3:0] F, output [2:0] E);
+	round uut (.mag(mag), .f_temp(f_temp), .exp(exp), .round_bit(round_bit), .F(F), .E(E));
 
 	initial begin
 		#100;
