@@ -37,22 +37,27 @@ module priority_encoder_tb;
 	);
 
 	initial begin
-		// Initialize Inputs
+		#100;
+		
+		//test 0
+		//OUT = 0
 		IN = 0;
 		#20
-		IN = 'b100000010000;
+		
+		//test max
+		//OUT = 11
+		IN = 'b100000000000;
 		#20
-		IN = 'b000100000000;
+		
+		//test middle
+		//OUT = 8
+		IN = 'b000100001010;
 		#20
-		IN = 'b000000000101;
+		
+		//test 1
+		//OUT = 0
+		IN = 1;
 		#20
-		IN = 'b000000000001;
-		#20;
-
-		// Wait 100 ns for global reset to finish
-		#100;
-        
-		// Add stimulus here
 
 	end
       
